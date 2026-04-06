@@ -55,7 +55,7 @@ Authenticate your GIT session:
     git clone https://github.com/Aibel-OT-Cybersecurity/zonesAndConduites.git
 ```
 
-This will create a GIT controlled folder "zonesAndConduites" in your /home/csteam folder. The Python script and our CSV-file is under the folder ZonesAndConduites.
+This will create a GIT controlled folder "zonesAndConduites" in your /home/csteam/GIT folder. The Python script and our CSV-file is under the folder ZonesAndConduites.
 
 Also do this on your own laptop and edit the files locally there. Use Microsoft VS Code with GIT to push all changes to Github from there, and use git pull on the neo4j-server.
 
