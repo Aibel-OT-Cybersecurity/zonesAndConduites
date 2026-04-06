@@ -36,9 +36,24 @@ Let's try to
 - Open Neo4j Bloom and search with the default "Show me a graph". Should be empty for now.
 
 ## Let's get the data pulled from github repository
-In the home folder of jslab-neo4j server:
+In the ~home~/GIT folder of jslab-neo4j server:
 
+Authenticate your GIT session:
+
+```bash
+    gh auth login
+```
+
+    Follow the prompts:
+    - Select `GitHub.com`
+    - Choose `HTTPS` for Git operations
+    - Authenticate with GitHub credentials
+    - Select `Login with a web browser`
+    - Copy the one-time code and authenticate in your browser
+
+```bash
     git clone https://github.com/Aibel-OT-Cybersecurity/zonesAndConduites.git
+```
 
 This will create a GIT controlled folder "zonesAndConduites" in your /home/csteam folder. The Python script and our CSV-file is under the folder ZonesAndConduites.
 

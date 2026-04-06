@@ -22,25 +22,35 @@ with open('ZaC-ABB-WithSL-T.csv', 'r') as file:
         from_node_label = row[11]
         to_node_label = row[12]
         edge_id = row[0]
+        conduit_name = row[1]
+        from_zone = row[2]
+        to_zone = row[3]
         edge_description = row[8]
+        notes = row[9] if len(row) > 9 else ""
+        notes2 = row[10] if len(row) > 10 else ""
 
         # Create nodes and connect them
         with driver.session() as session:
             session.run(
             "MERGE (from:Node {name: $from_node}) "
             "MERGE (to:Node {name: $to_node}) "
-            "SET from += {label: $from_node_label} "
-            "SET to += {label: $to_node_label} "
+            "SET from += {label: $from_node_label, zone: $from_zone} "
+            "SET to += {label: $to_node_label, zone: $to_zone} "
             "MERGE (from)-[connects:CONNECTS]->(to) "
-            "SET connects += {edge_id: $edge_id, edge_description: $edge_description, ports: $ports, service: $service}",
+            "SET connects += {edge_id: $edge_id, conduit_name: $conduit_name, edge_description: $edge_description, ports: $ports, service: $service, notes: $notes, notes2: $notes2}",
             edge_id=edge_id,
+            conduit_name=conduit_name,
             edge_description=edge_description,
             from_node=from_node,
             to_node=to_node,
+            from_zone=from_zone,
+            to_zone=to_zone,
             ports=ports,
             service=service,
             from_node_label=from_node_label,
-            to_node_label=to_node_label
+            to_node_label=to_node_label,
+            notes=notes,
+            notes2=notes2
             )
 
 # Close the Neo4j driver
