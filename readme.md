@@ -65,7 +65,7 @@ Now you're ready to run the aibelFirewall.py script to generate the graph:
 
     python3 ./aibelFirewall.py
 
-It's pretty quick.
+This will read the ZaC-ABB-WithSL-T.csv and create a graph. It's pretty quick.
 
 # Neo4j operations
 Open the Neo4j Bloom and do the "Show me a graph" again. Should now show something that looks a bit like ABB 800xA control system. (Still some mistakes to be fixed.)
