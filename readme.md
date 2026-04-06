@@ -38,7 +38,7 @@ Let's try to
 ## Let's get the data pulled from github repository
 In the home folder of jslab-neo4j server:
 
-    git clone https://{{GITHUB_PAT}}@github.com/AibelCS/Documentation.git
+    git clone https://github.com/Aibel-OT-Cybersecurity/zonesAndConduites.git
 
 This will create a GIT controlled folder "Documentation" in your /home/csteam folder. The Python script and our CSV-file is under the folder ZonesAndConduites.
 
@@ -46,11 +46,20 @@ Also do this on your own laptop and edit the files locally there. Use Microsoft 
 
 ## Setup Python
 Check that Python is installed on the server:
-% python3 --version
-Python 3.12.3 (ok)
 
-Get the Python neo4j driver:
-% pip install neo4j --break-system-packages
+    python3 --version
+
+Create a virtual environment:
+
+    python3 -m venv .venv
+
+Activate the virtual environment:
+
+    source .venv/bin/activate
+
+Install the Neo4j driver:
+
+    pip install neo4j
 
 Now you're ready to run the aibelFirewall.py script to generate the graph:
 
