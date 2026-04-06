@@ -40,7 +40,7 @@ In the home folder of jslab-neo4j server:
 
     git clone https://github.com/Aibel-OT-Cybersecurity/zonesAndConduites.git
 
-This will create a GIT controlled folder "Documentation" in your /home/csteam folder. The Python script and our CSV-file is under the folder ZonesAndConduites.
+This will create a GIT controlled folder "zonesAndConduites" in your /home/csteam folder. The Python script and our CSV-file is under the folder ZonesAndConduites.
 
 Also do this on your own laptop and edit the files locally there. Use Microsoft VS Code with GIT to push all changes to Github from there, and use git pull on the neo4j-server.
 
@@ -65,7 +65,7 @@ Now you're ready to run the aibelFirewall.py script to generate the graph:
 
     python3 ./aibelFirewall.py
 
-This will read the ZaC-ABB-WithSL-T.csv and create a graph. It's pretty quick.
+This will read the ZaC-ABB-WithSL-T.csv and create a graph in Neo4j. It's pretty quick.
 
 # Neo4j operations
 Open the Neo4j Bloom and do the "Show me a graph" again. Should now show something that looks a bit like ABB 800xA control system. (Still some mistakes to be fixed.)
